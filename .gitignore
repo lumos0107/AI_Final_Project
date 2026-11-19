@@ -1,0 +1,29 @@
+# 비밀 값: API 키와 비밀번호는 .env에만 두고, 이름만 .env.example에 적어 올립니다.
+.env
+.env.*
+!.env.example
+
+# 개인 설정
+.claude/settings.local.json
+.vscode/
+.idea/
+
+# 운영체제가 만드는 파일
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 빌드 결과와 로그
+dist/
+build/
+*.log
