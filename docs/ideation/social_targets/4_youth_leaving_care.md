@@ -37,7 +37,7 @@
 flowchart LR
     P1["문제 1<br>생활비·돈 관리"]
     P2["문제 2<br>집 구하기·계약"]
-    P3["문제 3<br>흩어진 제도 정보"]
+    P3["문제 3<br>흩어진<br>제도 정보"]
     P4["문제 4<br>물어볼 어른"]
     P5["문제 5<br>마음 건강·고립"]
     P6["문제 6<br>금전 착취·사기"]
@@ -65,9 +65,9 @@ flowchart LR
 
     I1 -->|"18점"| KEEP
     I5 -->|"17점"| KEEP
-    I3 -->|"17점·채팅으로 해결"| DROP
-    I2 -->|"12점·채팅으로 해결"| DROP
-    I4 -->|"12점·4주 안 됨"| DROP
+    I3 -->|"17점<br>채팅으로 해결"| DROP
+    I2 -->|"12점<br>채팅으로 해결"| DROP
+    I4 -->|"12점<br>4주 안 됨"| DROP
 
     classDef keep fill:#dbeafe,stroke:#2563eb,color:#111
     classDef drop fill:#f3f4f6,stroke:#9ca3af,color:#6b7280
