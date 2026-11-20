@@ -54,6 +54,7 @@ flowchart TD
 | [01_idea_glossary.md](01_idea_glossary.md) | 아이디어 1이 나온 과정, 분야 지도, 비슷한 사례 |
 | [02_idea_tax.md](02_idea_tax.md) | 아이디어 2가 나온 과정, 비슷한 사례와 걸리는 점 |
 | [03_ai_corrections.md](03_ai_corrections.md) | 주제를 찾는 동안 AI의 판단을 사람이 바로잡은 기록 |
+| [social_targets/](social_targets/) | 사회 문제 쪽으로 넓힌 후보. 대상 6개, 대상별 문제, 해결 방법 30개, 평가로 남은 12개와 떨어진 이유 |
 | [earlier_rounds/](earlier_rounds/) | 두 아이디어가 나오기 전, AI가 후보를 낸 1~6차 기록 |
 | [earlier_rounds/01_criteria.md](earlier_rounds/01_criteria.md) | 고르는 기준이 생긴 순서 |
 | [earlier_rounds/02_rounds.md](earlier_rounds/02_rounds.md) | 1~6차 후보와 버린 이유 |
