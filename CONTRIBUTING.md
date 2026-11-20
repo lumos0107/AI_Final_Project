@@ -53,7 +53,7 @@ git push -u origin feat/12-term-card
 ### 다. 사전 시험 (`spike/`)
 
 1) 코드는 `experiments/<시험 이름>/` 폴더 안에만 둡니다.
-2) 결과는 버린 시험이라도 `docs/ideation/06_pretest.md`에 적어 main에 합칩니다.
+2) 결과는 버린 시험이라도 `docs/ideation/04_pretest.md`에 적어 main에 합칩니다.
 3) 코드는 세 가지를 지키면 함께 합칩니다. `experiments/` 밖의 파일을 건드리지 않을 것, 키나 비밀번호가 없을 것, 큰 파일이 없을 것. 지키기 어려우면 PR을 닫고 결과 문서에서 링크합니다.
 
 ## 3. 커밋
