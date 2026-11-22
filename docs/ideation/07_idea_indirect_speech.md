@@ -6,12 +6,12 @@
 
 ```mermaid
 flowchart TD
-    A["계기 영상을 봄<br>가상 AI 이어폰<br>11/21"] --> B["첫 방향<br>상대의 숨은 의도 읽어 주기<br>11/21"]
-    B --> C["비슷한 사례 조사<br>대화 분석과 대응 추천은 이미 많음<br>11/21"]
-    C --> D["방향을 뒤집음<br>내 의도를 간접 문장으로 만들기<br>11/22"]
-    D --> E["구체화<br>이전 대화와 상대 정보를 암시 재료로 씀<br>11/22"]
-    E --> F["기말 주제 후보로 냄<br>11/22"]
-    F --> G["주제 결정<br>이슈 5번에서 진행 중"]
+    A["계기 영상을 봄<br>가상 AI 이어폰<br>11/21"] --> B["첫 방향<br>상대의 숨은 의도<br>읽어 주기<br>11/21"]
+    B --> C["비슷한 사례 조사<br>대화 분석과<br>대응 추천은<br>이미 많음<br>11/21"]
+    C --> D["방향을 뒤집음<br>내 의도를<br>간접 문장으로<br>만들기<br>11/22"]
+    D --> E["구체화<br>이전 대화와<br>상대 정보를<br>암시 재료로 씀<br>11/22"]
+    E --> F["기말 주제<br>후보로 냄<br>11/22"]
+    F --> G["주제 결정<br>이슈 5번에서<br>진행 중"]
 ```
 
 ### 가. 출발점: 가상 AI 이어폰 (11/21)
@@ -72,12 +72,12 @@ flowchart TD
 | 분야 | 이미 있는 것 | 비어 있는 곳 |
 |---|---|---|
 | 말투 바꾸기 | goblin.tools Formalizer(정중하게, 전문적으로 등 말투를 골라 바꿔 줌), 여러 AI 말투 변환 도구 | 지금 문장만 바꿈. 이전 대화나 상대가 아는 것은 보지 않음 |
-| 대화 코칭, 답장 추천 | Cyranote, DateChatAI(연애 대화 답장 추천), Konvo AI(대화 연습과 채점) | 다음에 할 말을 추천하지만, 함께 겪은 일을 암시 재료로 고르지는 않음 |
+| 대화 코칭 | Konvo AI(대화 연습과 채점) | 대화를 연습하고 채점하지만, 함께 겪은 일을 암시 재료로 고르지는 않음 |
 | 대화 함축 연구 | 대화 함축 708문항 데이터셋(Lombardi·Lenci), COMMON-TOM(대화 참여자가 공유한 믿음으로 마음 이론 평가, ACL 2024 Findings), SwordsmanImp(중국어 여러 턴 대화 함축) | 대부분 AI가 함축을 "알아듣는지" 평가함. 공유한 대화로 함축을 "만드는" 연구는 검색한 범위에서 찾지 못함 |
 
 ## 4. 지금까지의 판단
 
-1) 말투 바꾸기와 답장 추천은 이미 많습니다. 남은 틈은 "상대와 공유한 대화를 근거로 암시를 고른다"는 부분입니다.
+1) 말투 바꾸기와 대화 코칭 도구는 이미 있습니다. 남은 틈은 "상대와 공유한 대화를 근거로 암시를 고른다"는 부분입니다.
 2) "그냥 AI한테 물어보면 되지 않나"가 가장 큰 약점입니다. 이전 대화를 붙여 넣고 "이 맥락으로 돌려 말해 줘"라고 하면 AI 채팅도 비슷한 문장을 만들 수 있습니다. 차이를 보이려면 두 가지가 필요합니다.
    - 대화를 매번 붙여 넣지 않아도 상대별로 쌓인 대화와 지식을 기억하고 있음
    - 만든 문장마다 "상대가 알아챌 가능성"과 "뜻이 드러난 정도"를 따로 평가해 보여 줌
@@ -91,10 +91,7 @@ flowchart TD
 
 - [goblin.tools Formalizer 소개 (stork.ai)](https://www.stork.ai/en/goblin-tools-formalizer)
 - [Top 10 AI Tone Rewriters (ClickUp)](https://clickup.com/blog/ai-tone-rewriters/)
-- [Cyranote (App Store)](https://apps.apple.com/us/app/cyranote/id6482291145)
-- [DateChatAI (App Store)](https://apps.apple.com/us/app/datechatai-double-your-dates/id6469422923)
 - [Konvo AI (App Store)](https://apps.apple.com/app/id6772602328)
 - [Evaluating Conversational Implicatures in LLMs: Pragmatics or Theory of Mind? (Lombardi)](https://agneselombardi.github.io/event/event6)
-- [대화 기록과 마음 이론 평가 (Lombardi·Lenci, arXiv 2510.13395)](https://arxiv.org/html/2510.13395v1)
 - [Views Are My Own, but Also Yours: Benchmarking Theory of Mind Using Common Ground (ACL 2024 Findings)](https://aclanthology.org/2024.findings-acl.880)
 - [SwordsmanImp (CCL 2024)](https://aclanthology.org/2024.ccl-1.98.pdf)
