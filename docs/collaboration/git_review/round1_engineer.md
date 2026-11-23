@@ -12,7 +12,7 @@
 
 ### 나. 문제점
 
-1) **(상) 지금까지 커밋 7개가 누구의 기여로도 잡히지 않습니다.** `gh api .../commits/aaa8792 --jq .author.login` 결과가 null입니다(bafa728도 null, 웹에서 만든 Initial commit만 lumos0107). 이 PC 전역 `user.email`이 개인 gmail이고, 같은 주소의 다른 저장소 커밋 43개도 모두 null입니다. 기여 그래프와 Insights는 계정에 연결된 이메일의 커밋만 셉니다[1][5]. main은 관리자에게도 force push 금지이므로[9] PR #3·#4를 **합치기 전에** 고쳐야 합니다.
+1) **(상) 지금까지 커밋 7개가 누구의 기여로도 잡히지 않습니다.** `gh api .../commits/aaa8792 --jq .author.login` 결과가 null입니다(bafa728도 null, 웹에서 만든 Initial commit만 lumos0107). 이 PC 전역 `user.email`이 개인 gmail이고, 같은 주소의 다른 저장소 커밋(수 가림)도 모두 null입니다. 기여 그래프와 Insights는 계정에 연결된 이메일의 커밋만 셉니다[1][5]. main은 관리자에게도 force push 금지이므로[9] PR #3·#4를 **합치기 전에** 고쳐야 합니다.
 2) **(상) 팀원이 저장소에 없습니다.** 기록(이슈 2, PR 2, 커밋 7)이 모두 한 사람 것이고 초대 대기도 없습니다. PR 작성자는 자기 PR을 승인할 수 없어[7] 지금 PR #3·#4는 주인이 보호를 건너뛰어야만 합칠 수 있습니다. PR 리뷰도 기여로 셈하므로[1] 두 PR 리뷰를 팀원의 첫 기여로 쓰면 됩니다.
 3) **(중) 보호 규칙이 두 사람에게 다르게 작동합니다.** enforce_admins가 꺼져 있으면 규칙이 관리자에게 적용되지 않고[8], 승인 없이 보호 브랜치에 합치는 것은 주인만 할 수 있으며 협업자를 관리자로 올릴 방법도 없습니다[10]. 주인(과 주인 계정으로 도는 Claude Code)은 승인 없이 합칠 수 있고, 팀원은 늘 주인 승인을 기다립니다. 마감 주 밤에 주인이 없으면 막힙니다.
 4) **(중) CONTRIBUTING.md 설명 일부가 부정확합니다.**
@@ -20,7 +20,7 @@
    - 7장: 깃허브는 이메일만으로 계정에 연결합니다[3]. `user.name`의 "깃허브 아이디" 주석은 오해를 부르고, `git config` 출력만으로는 등록 여부를 알 수 없습니다(주인 본인이 통과 못 함). 커밋 화면의 작성자 링크나 위 API로 확인해야 합니다.
    - 6장 1) "23:59까지만 커밋": 웹에서 합치면 합친 시각에 merge commit이 생깁니다. 23:50 커밋을 0:10에 합치면 main에 12/21 커밋이 남습니다. 기준은 "합치기 완료"여야 합니다. 병합 기록은 Activity 화면에 남습니다[11].
 5) **(중) 커밋 6개가 1초 안(17:00:19~20)에 찍혔습니다.** 분포 기준에 보탬이 없고 기계적으로 쪼갠 흔적으로 읽힙니다. 하루치라 피해는 작지만, AI가 몰아 만들고 한 번에 커밋하는 습관이 기능 개발로 이어지면 직접 손해입니다. 날짜를 고쳐 쓰는 방법은 Activity의 실제 push 기록[11]과 어긋나니 쓰지 마십시오.
-6) **(중, 예방) 작성자가 Claude인 커밋은 학생 기여가 아닙니다.** 다른 저장소 커밋 100개 중 57개가 작성자 `Claude <noreply@anthropic.com>`이고 깃허브 계정 `claude`로 연결됩니다. 이 저장소는 사람이 작성자, Claude는 `Co-Authored-By`에만 있어 괜찮습니다. 이 방식을 규칙에 적어야 합니다.
+6) **(중, 예방) 작성자가 Claude인 커밋은 학생 기여가 아닙니다.** 다른 저장소 커밋 일부(수 가림)가 작성자 `Claude <noreply@anthropic.com>`이고 깃허브 계정 `claude`로 연결됩니다. 이 저장소는 사람이 작성자, Claude는 `Co-Authored-By`에만 있어 괜찮습니다. 이 방식을 규칙에 적어야 합니다.
 7) **(하)** PR #3(9파일 1,163줄)은 CONTRIBUTING 4장 1) "10분 안에 읽을 크기"를 스스로 어깁니다. 기본 라벨(bug, enhancement, documentation)이 새 라벨(fix, feat, docs)과 겹칩니다.
 
 ## 2. 브랜치 구성 권고
@@ -94,7 +94,7 @@
 - `git log --all --graph`: 문서 커밋 6개 17:00:19~20, 작성자 이메일 개인 gmail(Initial commit만 noreply)
 - `gh api repos/lumos0107/AI_Final_Project/commits/{aaa8792,bafa728,c81c2b3}`: author.login null, null, lumos0107
 - `git config --show-origin user.email`: 전역 `~/.gitconfig`에 개인 gmail
-- `gh api repos/lumos0107/<다른 저장소>/commits?per_page=100`: null(gmail) 43개, claude 57개
+- `gh api repos/lumos0107/<다른 저장소>/commits?per_page=100`: null(gmail)과 claude 작성 커밋이 섞여 있음(수 가림)
 - `gh api .../branches/main/protection`: enforce_admins false, 승인 1명, force push·삭제 금지. rulesets 없음, 초대 없음, 협업자 lumos0107만
 - `gh pr view 3`: 9파일 1,163줄, 리뷰 0
 
