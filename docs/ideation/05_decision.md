@@ -27,7 +27,7 @@ flowchart LR
 |---|---|---|
 | 아이디어 | 1. 용어 정리집, 2. 세금 도우미, 3. 기억하는 개인 AI 비서, 4. 맥락 기반 간접 발화 생성 AI | [01](01_idea_glossary.md), [02](02_idea_tax.md), [06](06_idea_memory_assistant.md), [07](07_idea_indirect_speech.md) |
 | 사회 문제 후보 | 대상 6개에서 남은 12개 | [social_targets/README.md](social_targets/README.md) 3장 |
-| 늦게 들어온 아이디어 | 5. 요청에서 자라는 기능 분류표 (5장에서 따로 평가) | [08](08_idea_request_function_map.md) |
+| 늦게 들어온 아이디어 | 5. 요청에서 자라는 기능 분류표 (5장에서 따로 평가). 첫 안은 개인화 AI 비서 | [08](08_idea_personal_assistant.md), [09](09_idea_request_function_map.md) |
 
 ### 나. 기준
 
